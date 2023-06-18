@@ -25,8 +25,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 mt-2">
-                        <select name="typeBalance" id="typeBalance" class="form-select mb-3">
-                            <option selected>Select Type</option>
+                        <select name="typeBalance" id="typeBalance" class="form-select mb-3" onchange="disableSelect()">
+                            <option value="not" selected>Select Type</option>
                             <option value="income">Income</option>
                             <option value="expense">Expense</option>
                         </select>
@@ -38,7 +38,8 @@
                             <input type="number" class="form-control" id="amount" placeholder=" ">
                             <label for="amount" class="form-label">Amount</label>
                         </div>
-                        <button class="btn btn-primary text-center w-100" onclick="addNewAction()">Add</button>
+                        <button id="addBtn" class="btn btn-primary text-center w-100"
+                            onclick="addNewAction()">Add</button>
                     </div>
                     <div class="col-md-8">
                         <table class="table table-striped">
