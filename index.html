@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ManageUuuu</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Personal CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center text-primary mt-2">My<i class="fa-solid fa-chart-pie"
+                    style="color: #818183;"></i>ACCOUNT
+            </h1>
+            <hr class="text-primary">
+            <div class="alert alert-secondary text-center fs-5 fw-bolder" role="alert" id="balance">Balance:</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mt-2">
+                        <select name="typeBalance" id="typeBalance" class="form-select mb-3">
+                            <option selected>Select Type</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                        <div class="mb-3 form-floating">
+                            <input type="text" class="form-control" id="desc" placeholder=" ">
+                            <label for="desc" class="form-label">Description</label>
+                        </div>
+                        <div class="mb-3 form-floating">
+                            <input type="number" class="form-control" id="amount" placeholder=" ">
+                            <label for="amount" class="form-label">Amount</label>
+                        </div>
+                        <button class="btn btn-primary text-center w-100" onclick="addNewAction()">Add</button>
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableData">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- Personal JS -->
+        <script src="assets/js/main.js" type="module"></script>
+    </body>
+
+</html>
